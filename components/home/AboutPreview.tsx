@@ -5,10 +5,10 @@ import { CheckCircle2 } from "lucide-react";
 import Image from "next/image";
 
 const stats = [
-  { label: "Proyectos Completados", value: "150+" },
-  { label: "Años de Experiencia", value: "10+" },
-  { label: "Profesionales", value: "50+" },
-  { label: "Clientes Satisfechos", value: "100+" },
+  { label: "Proyectos Liderados", value: "50+" },
+  { label: "Experiencia del Equipo", value: "10+ Años" },
+  { label: "Especialistas Clave", value: "15+" },
+  { label: "Calidad y Seguridad", value: "100%" },
 ];
 
 const features = [
@@ -39,8 +39,8 @@ export default function AboutPreview() {
             />
             {/* Overlay badge */}
             <div className="absolute bottom-6 left-6 bg-primary text-white p-6 rounded-xl shadow-lg border-l-4 border-accent">
-              <p className="text-3xl font-bold text-accent mb-1">10+</p>
-              <p className="text-sm font-medium">Años Construyendo<br/>el Futuro</p>
+              <p className="text-3xl font-bold text-accent mb-1">100%</p>
+              <p className="text-sm font-medium">Calidad y<br/>Compromiso</p>
             </div>
           </motion.div>
 
