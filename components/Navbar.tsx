@@ -30,19 +30,24 @@ export default function Navbar() {
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         isScrolled
           ? "bg-white shadow-md py-3"
-          : "bg-transparent py-5"
+          : "bg-transparent py-4"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
-        {/* Logo */}
-        <Link href="/" className="flex items-center gap-2">
+        <Link href="/" className="flex items-center gap-2 sm:gap-3 group">
           <Image
-            src="/logotipo.png"
+            src="/logotipo_optimized.png"
             alt="H&M Project Solutions"
-            width={150}
-            height={50}
-            className="h-12 w-auto object-contain"
+            width={120}
+            height={40}
+            className="h-8 sm:h-10 w-auto object-contain"
           />
+          <div className="flex flex-col justify-center border-l border-gray-300 pl-2 sm:pl-3">
+            <span className="font-logo font-bold text-[10px] sm:text-sm md:text-[12px] tracking-[0.12em] text-secondary uppercase leading-none">
+              PROJECT SOLUTIONS
+            </span>
+            <div className="w-full h-[1px] sm:h-[1.5px] bg-accent mt-1" />
+          </div>
         </Link>
 
         {/* Desktop Nav */}
@@ -51,9 +56,7 @@ export default function Navbar() {
             <Link
               key={link.name}
               href={link.href}
-              className={`text-sm font-medium transition-colors hover:text-accent ${
-                isScrolled ? "text-primary" : "text-primary"
-              }`}
+              className="text-sm font-medium transition-colors hover:text-accent text-primary"
             >
               {link.name}
             </Link>
@@ -74,9 +77,9 @@ export default function Navbar() {
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
           {mobileMenuOpen ? (
-            <X className={isScrolled ? "text-primary" : "text-white"} />
+            <X className="text-primary" />
           ) : (
-            <Menu className={isScrolled ? "text-primary" : "text-white"} />
+            <Menu className="text-primary" />
           )}
         </button>
       </div>

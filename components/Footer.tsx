@@ -9,14 +9,20 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Brand Info */}
           <div className="flex flex-col gap-6">
-            <Link href="/" className="inline-block bg-white p-2 rounded w-fit">
+            <Link href="/" className="flex items-center gap-3 bg-white p-2 rounded w-fit group">
               <Image
-                src="/logotipo.png"
+                src="/logotipo_optimized.png"
                 alt="H&M Project Solutions"
-                width={150}
-                height={50}
-                className="h-10 w-auto object-contain"
+                width={120}
+                height={40}
+                className="h-9 w-auto object-contain"
               />
+              <div className="flex flex-col justify-center border-l border-gray-300 pl-3">
+                <span className="font-logo font-bold text-xs sm:text-sm tracking-[0.12em] text-[#2D3748] uppercase leading-none">
+                  PROJECT SOLUTIONS
+                </span>
+                <div className="w-full h-[1.5px] bg-accent mt-1" />
+              </div>
             </Link>
             <p className="text-gray-300 text-sm leading-relaxed">
               Construimos proyectos que transforman el futuro. Soluciones integrales en ingeniería, obras civiles y arquitectura con los más altos estándares de calidad y seguridad.

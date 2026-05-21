@@ -9,6 +9,7 @@
   --color-background: #F8FAFC; /* Light gray background */
   --color-foreground: #0F172A; /* Default text */
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-logo: var(--font-syncopate), sans-serif;
   
   --color-dark-bg: #0F172A;
   --color-dark-surface: #1E293B;
