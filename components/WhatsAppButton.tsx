@@ -1,102 +1,44 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function WhatsAppButton() {
-  const [isVisible, setIsVisible] = useState(false);
-  const pathname = usePathname();
+  const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
-    // Escanea los botones de WhatsApp de la página (excluyendo el flotante actual)
-    const getCtaButtons = () => {
-      return Array.from(
-        document.querySelectorAll('main a[href*="wa.me"]:not(.whatsapp-floating-btn)')
-      );
-    };
+    setIsMounted(true);
+  }, []);
 
-    let observer: IntersectionObserver | null = null;
-    const intersectingElements = new Set<Element>();
-
-    const updateVisibility = () => {
-      // Si hay algún botón CTA de WhatsApp intersectando, se oculta el botón flotante
-      setIsVisible(intersectingElements.size === 0);
-    };
-
-    const setupObserver = () => {
-      if (observer) {
-        observer.disconnect();
-      }
-
-      intersectingElements.clear();
-      const ctaButtons = getCtaButtons();
-
-      if (ctaButtons.length === 0) {
-        // Si no hay otros botones de WhatsApp en esta pantalla, siempre se muestra
-        setIsVisible(true);
-        return;
-      }
-
-      observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              intersectingElements.add(entry.target);
-            } else {
-              intersectingElements.delete(entry.target);
-            }
-          });
-          updateVisibility();
-        },
-        {
-          root: null, // Viewport del navegador
-          threshold: 0.05, // Se activa cuando al menos el 5% del elemento es visible
-          rootMargin: "0px 0px -20px 0px", // Margen sutil para anticipar la transición
-        }
-      );
-
-      ctaButtons.forEach((btn) => observer?.observe(btn));
-      updateVisibility();
-    };
-
-    // Configuración inicial del observer
-    setupObserver();
-
-    // Debido a transiciones del lado del cliente en Next.js, monitorizamos cambios en el DOM
-    // para re-observar nuevos botones si se cargan componentes de forma dinámica
-    const mutationObserver = new MutationObserver(() => {
-      setupObserver();
-    });
-
-    mutationObserver.observe(document.body, {
-      childList: true,
-      subtree: true,
-    });
-
-    return () => {
-      if (observer) observer.disconnect();
-      mutationObserver.disconnect();
-    };
-  }, [pathname]);
-
-  const whatsappNumber = "51932682104";
+  const whatsappNumber = "51983752316";
   const message = "Hola, me gustaría recibir más información sobre sus servicios.";
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 
   return (
     <AnimatePresence>
-      {isVisible && (
+      {isMounted && (
         <motion.a
           key="whatsapp-float"
           href={whatsappUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="whatsapp-floating-btn fixed bottom-6 right-6 z-40 bg-[#25D366] hover:bg-[#20BA5A] text-white p-4 rounded-full shadow-2xl flex items-center justify-center transition-all hover:scale-110 active:scale-95 group"
-          initial={{ opacity: 0, scale: 0, y: 50 }}
-          animate={{ opacity: 1, scale: 1, y: 0 }}
-          exit={{ opacity: 0, scale: 0, y: 50 }}
-          transition={{ type: "spring", stiffness: 260, damping: 20 }}
+          className="whatsapp-floating-btn fixed bottom-6 right-6 z-40 bg-[#25D366] hover:bg-[#20BA5A] text-white p-4 rounded-full shadow-2xl flex items-center justify-center transition-colors hover:scale-110 active:scale-95 group"
+          initial={{ opacity: 0, scale: 0 }}
+          animate={{ 
+            opacity: 1, 
+            scale: 1,
+            y: [0, -15, 0]
+          }}
+          exit={{ opacity: 0, scale: 0 }}
+          transition={{ 
+            opacity: { duration: 0.3 },
+            scale: { duration: 0.3 },
+            y: { 
+              duration: 2, 
+              repeat: Infinity, 
+              ease: "easeInOut" 
+            }
+          }}
           aria-label="Contactar por WhatsApp"
         >
           {/* SVG de WhatsApp de alta fidelidad */}

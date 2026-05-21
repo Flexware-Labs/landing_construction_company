@@ -46,7 +46,7 @@ export default function Navbar() {
             <span className="font-logo font-bold text-[10px] sm:text-sm md:text-[12px] tracking-[0.12em] text-secondary uppercase leading-none">
               PROJECT SOLUTIONS
             </span>
-            <div className="w-full h-[1px] sm:h-[1.5px] bg-accent mt-1" />
+            <div className="w-full h-px sm:h-[1.5px] bg-accent mt-1" />
           </div>
         </Link>
 
@@ -62,7 +62,7 @@ export default function Navbar() {
             </Link>
           ))}
           <a
-            href="https://wa.me/51932682104"
+            href="https://wa.me/51983752316"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-accent hover:bg-accent-hover text-white px-6 py-2 rounded-full font-medium transition-colors shadow-sm"
@@ -104,7 +104,7 @@ export default function Navbar() {
               </Link>
             ))}
             <a
-              href="https://wa.me/51932682104"
+              href="https://wa.me/51983752316"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-accent hover:bg-accent-hover text-white px-8 py-2 rounded-full font-medium transition-colors mt-2"

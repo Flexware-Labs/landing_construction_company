@@ -96,7 +96,7 @@ export default function ServicesPreview() {
         >
           {services.map((service, index) => {
             const message = `Hola, quiero cotizar el servicio de ${service.title}`;
-            const whatsappUrl = `https://wa.me/51932682104?text=${encodeURIComponent(message)}`;
+            const whatsappUrl = `https://wa.me/51983752316?text=${encodeURIComponent(message)}`;
 
             return (
               <motion.div 

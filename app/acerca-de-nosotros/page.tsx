@@ -66,7 +66,7 @@ export default function AcercaDeNosotrosPage() {
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="relative h-[400px] rounded-2xl overflow-hidden shadow-2xl"
+              className="relative h-100 rounded-2xl overflow-hidden shadow-2xl"
             >
               <Image
                 src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=2071&auto=format&fit=crop"

@@ -85,7 +85,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/servicios" className="text-gray-300 hover:text-accent transition-colors text-sm text-accent font-medium mt-2 block">
-                  Ver todos los servicios &rarr;
+                  Ver todos los servicios
                 </Link>
               </li>
             </ul>
@@ -98,17 +98,17 @@ export default function Footer() {
               <li className="flex items-start gap-3 text-gray-300 text-sm">
                 <MapPin className="text-accent shrink-0 mt-0.5" size={18} />
                 <span>
-                  Av. Principal 1234, Oficina 501<br />
-                  Lima, Perú
+                  Jr. El Dorado 145<br />
+                  Moyobamba, Perú
                 </span>
               </li>
               <li className="flex items-center gap-3 text-gray-300 text-sm">
                 <Phone className="text-accent shrink-0" size={18} />
-                <a href="tel:+51932682104" className="hover:text-accent transition-colors">+51 932 682 104</a>
+                <a href="tel:+51983752316" className="hover:text-accent transition-colors">+51 983 752 316</a>
               </li>
               <li className="flex items-center gap-3 text-gray-300 text-sm">
                 <Mail className="text-accent shrink-0" size={18} />
-                <a href="mailto:contacto@hmprojectsolutions.com" className="hover:text-accent transition-colors">contacto@hmprojectsolutions.com</a>
+                <a href="mailto:solutionsr@outlook.com" className="hover:text-accent transition-colors">solutionsr@outlook.com</a>
               </li>
             </ul>
           </div>

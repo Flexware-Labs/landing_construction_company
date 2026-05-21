@@ -27,7 +27,7 @@ export default function CTASection() {
           </p>
           
           <a
-            href="https://wa.me/51932682104"
+            href="https://wa.me/51983752316"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-3 bg-accent hover:bg-accent-hover text-white px-10 py-5 rounded-full font-bold text-lg transition-all hover:scale-105 shadow-xl hover:shadow-2xl"

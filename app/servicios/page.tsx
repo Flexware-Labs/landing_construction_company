@@ -82,7 +82,7 @@ export default function ServiciosPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-24">
           {services.map((service, index) => {
             const isEven = index % 2 === 0;
-            const whatsappUrl = `https://wa.me/51932682104?text=${encodeURIComponent(`Hola, quiero cotizar el servicio de ${service.title}`)}`;
+            const whatsappUrl = `https://wa.me/51983752316?text=${encodeURIComponent(`Hola, quiero cotizar el servicio de ${service.title}`)}`;
 
             return (
               <motion.div 
