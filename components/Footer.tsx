@@ -120,11 +120,8 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} H&M Project Solutions. Todos los derechos reservados.
           </p>
           <div className="flex gap-6">
-            <Link href="/privacidad" className="text-gray-400 hover:text-white text-sm transition-colors">
-              Políticas de Privacidad
-            </Link>
-            <Link href="/terminos" className="text-gray-400 hover:text-white text-sm transition-colors">
-              Términos de Servicio
+            <Link href="https://www.facebook.com/flexware.labs/" target="_blank" className="text-gray-400 hover:text-white text-sm transition-colors">
+              By: Flexware Labs
             </Link>
           </div>
         </div>
