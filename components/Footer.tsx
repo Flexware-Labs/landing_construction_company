@@ -121,7 +121,7 @@ export default function Footer() {
           </p>
           <div className="flex gap-6">
             <Link href="https://www.facebook.com/flexware.labs/" target="_blank" className="text-gray-400 hover:text-white text-sm transition-colors">
-              By: Flexware Labs
+              Powered by Flexware Labs
             </Link>
           </div>
         </div>
