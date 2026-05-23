@@ -61,14 +61,12 @@ export default function Navbar() {
               {link.name}
             </Link>
           ))}
-          <a
-            href="https://wa.me/51983752316"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href="/contacto"
             className="bg-accent hover:bg-accent-hover text-white px-6 py-2 rounded-full font-medium transition-colors shadow-sm"
           >
             Contáctanos
-          </a>
+          </Link>
         </nav>
 
         {/* Mobile Menu Toggle */}
@@ -103,15 +101,13 @@ export default function Navbar() {
                 {link.name}
               </Link>
             ))}
-            <a
-              href="https://wa.me/51983752316"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              href="/contacto"
               className="bg-accent hover:bg-accent-hover text-white px-8 py-2 rounded-full font-medium transition-colors mt-2"
               onClick={() => setMobileMenuOpen(false)}
             >
               Contáctanos
-            </a>
+            </Link>
           </motion.div>
         )}
       </AnimatePresence>

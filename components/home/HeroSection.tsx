@@ -27,17 +27,17 @@ export default function HeroSection() {
           className="max-w-4xl mx-auto"
         >
           <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-            Construimos proyectos que <span className="text-accent">transforman el futuro</span>
+            Ingeniería y Construcción que <span className="text-accent">Transforman el Perú</span>
           </h1>
-          <p className="text-lg md:text-xl text-gray-200 mb-10 max-w-2xl mx-auto">
-            Soluciones integrales en ingeniería, obras civiles y arquitectura. Infraestructura moderna, eficiente y segura para tus necesidades.
+          <p className="text-lg md:text-xl text-gray-200 mb-10 max-w-3xl mx-auto">
+            Somos <strong>H&M Project Solutions</strong>, una empresa constructora especializada en obras civiles, habilitación urbana y diseño arquitectónico moderno. Desarrollamos proyectos de alta envergadura en Moyobamba y a nivel nacional con excelencia, puntualidad y máxima seguridad.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <motion.a
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              href="/servicios"
+              href="/contacto"
               className="bg-accent hover:bg-accent-hover text-white px-8 py-4 rounded-full font-semibold text-lg transition-colors flex items-center gap-2 w-full sm:w-auto justify-center"
             >
               Solicitar Cotización <ArrowRight size={20} />

@@ -5,33 +5,33 @@ import { Shield, Award, Clock, Lightbulb, HardHat, TrendingUp } from "lucide-rea
 
 const reasons = [
   {
-    title: "Profesionalismo",
-    description: "Equipo altamente capacitado y comprometido con la excelencia.",
+    title: "Respaldo Técnico Profesional",
+    description: "Contamos con un staff de ingenieros civiles, arquitectos y técnicos altamente capacitados y comprometidos con la excelencia estructural.",
     icon: <HardHat size={32} />
   },
   {
-    title: "Calidad",
-    description: "Uso de los mejores materiales y procesos constructivos garantizados.",
+    title: "Garantía de Calidad",
+    description: "Aplicamos rigurosos controles de calidad en cada etapa, utilizando únicamente materiales certificados y procesos constructivos garantizados.",
     icon: <Award size={32} />
   },
   {
-    title: "Seguridad",
-    description: "Estrictos protocolos para salvaguardar la integridad de la obra y el personal.",
+    title: "Seguridad Integral (Cero Accidentes)",
+    description: "Implementamos estrictos protocolos de seguridad y salud en el trabajo (SST) para proteger la vida de nuestro personal y la integridad de la obra.",
     icon: <Shield size={32} />
   },
   {
-    title: "Cumplimiento",
-    description: "Entregas puntuales según los cronogramas establecidos.",
+    title: "Cumplimiento y Puntualidad",
+    description: "Respetamos estrictamente los cronogramas de obra establecidos. Entregamos proyectos a tiempo y dentro del presupuesto pactado.",
     icon: <Clock size={32} />
   },
   {
-    title: "Innovación",
-    description: "Aplicación de tecnologías y métodos modernos en cada proyecto.",
+    title: "Tecnología e Innovación",
+    description: "Utilizamos herramientas avanzadas de modelado 3D, metodologías BIM y metodologías modernas para optimizar recursos y tiempos.",
     icon: <Lightbulb size={32} />
   },
   {
-    title: "Experiencia",
-    description: "Años de trayectoria resolviendo desafíos técnicos complejos.",
+    title: "Solidez y Experiencia",
+    description: "Años de trayectoria exitosa en Moyobamba y a nivel nacional, resolviendo con solidez técnica los desafíos de ingeniería más complejos.",
     icon: <TrendingUp size={32} />
   }
 ];

@@ -15,42 +15,42 @@ import {
 const services = [
   {
     title: "Obras Civiles",
-    description: "Construcción de edificaciones, infraestructura vial, puentes y estructuras de gran envergadura.",
+    description: "Construcción e ingeniería de puentes, carreteras, pavimentaciones, naves industriales y estructuras de alta resistencia.",
     icon: <Building2 size={40} />,
   },
   {
     title: "Habilitación Urbana",
-    description: "Desarrollo de terrenos, redes de agua, desagüe, electrificación y pavimentación.",
+    description: "Saneamiento físico-legal de terrenos, tendido de redes de agua y desagüe, electrificación y pavimentación integral.",
     icon: <Map size={40} />,
   },
   {
     title: "Construcción y Reconstrucción",
-    description: "Proyectos residenciales, comerciales e industriales desde cero o remodelaciones completas.",
+    description: "Edificación residencial y comercial desde los cimientos hasta los acabados, y restauración estructural de inmuebles.",
     icon: <Hammer size={40} />,
   },
   {
     title: "Demoliciones",
-    description: "Demolición segura y controlada de estructuras, con manejo adecuado de escombros.",
+    description: "Demolición segura de concreto armado y estructuras complejas, mitigación de riesgos y manejo responsable de escombros.",
     icon: <Trash2 size={40} />,
   },
   {
     title: "Ampliaciones y Refacciones",
-    description: "Mejoras estructurales y estéticas para modernizar y optimizar tus espacios.",
+    description: "Optimización, refuerzo y ampliación de espacios residenciales e industriales incorporando acabados modernos y seguros.",
     icon: <Wrench size={40} />,
   },
   {
-    title: "Mantenimiento",
-    description: "Servicios preventivos y correctivos para infraestructura civil y edificaciones.",
+    title: "Mantenimiento de Infraestructura",
+    description: "Planes correctivos y preventivos para prolongar la vida útil de plantas industriales, fachadas y edificaciones comerciales.",
     icon: <Wrench size={40} />,
   },
   {
     title: "Diseño Arquitectónico",
-    description: "Conceptualización y desarrollo de planos y diseños vanguardistas y funcionales.",
+    description: "Diseño de planos de arquitectura, modelado 3D, distribución eficiente de espacios y gestión de licencias municipales.",
     icon: <PenTool size={40} />,
   },
   {
     title: "Importación y Exportación",
-    description: "Provisión de materiales de construcción y maquinaria especializada de alta calidad.",
+    description: "Suministro e importación directa de maquinaria pesada, equipos de construcción y acabados exclusivos para proyectos.",
     icon: <Truck size={40} />,
   }
 ];
@@ -95,8 +95,8 @@ export default function ServicesPreview() {
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
         >
           {services.map((service, index) => {
-            const message = `Hola, quiero cotizar el servicio de ${service.title}`;
-            const whatsappUrl = `https://wa.me/51983752316?text=${encodeURIComponent(message)}`;
+            const serviceSlug = encodeURIComponent(service.title.toLowerCase().replace(/\s+/g, '-'));
+            const contactUrl = `/contacto?servicio=${serviceSlug}`;
 
             return (
               <motion.div 
@@ -108,11 +108,9 @@ export default function ServicesPreview() {
                   {service.icon}
                 </div>
                 <h3 className="text-xl font-bold text-primary mb-3">{service.title}</h3>
-                <p className="text-gray-600 mb-8 grow">{service.description}</p>
+                <p className="text-gray-600 mb-8 grow text-sm leading-relaxed">{service.description}</p>
                 <a 
-                  href={whatsappUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href={contactUrl}
                   className="inline-flex items-center gap-2 text-accent font-semibold hover:text-accent-hover transition-colors mt-auto group/btn"
                 >
                   Cotizar Servicio 

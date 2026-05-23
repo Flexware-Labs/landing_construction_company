@@ -64,6 +64,11 @@ export default function Footer() {
                   <span className="w-1.5 h-1.5 rounded-full bg-accent"></span> Acerca de Nosotros
                 </Link>
               </li>
+              <li>
+                <Link href="/contacto" className="text-gray-300 hover:text-accent transition-colors text-sm flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-accent"></span> Contacto
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -121,7 +126,7 @@ export default function Footer() {
           </p>
           <div className="flex gap-6">
             <Link href="https://www.facebook.com/flexware.labs/" target="_blank" className="text-gray-400 hover:text-white text-sm transition-colors">
-              Powered by Flexware Labs
+              Powered by: Flexware Labs
             </Link>
           </div>
         </div>

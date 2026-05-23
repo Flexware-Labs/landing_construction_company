@@ -12,10 +12,10 @@ const stats = [
 ];
 
 const features = [
-  "Ingeniería y soluciones estructurales",
-  "Obras civiles de alta complejidad",
-  "Importación de materiales y maquinaria",
-  "Habilitación urbana y demoliciones"
+  "Obras civiles e infraestructura vial de alta complejidad",
+  "Proyectos integrales de habilitación urbana y saneamiento",
+  "Diseño arquitectónico moderno y modelado 3D de vanguardia",
+  "Importación directa de maquinaria pesada y materiales premium"
 ];
 
 export default function AboutPreview() {
@@ -52,10 +52,10 @@ export default function AboutPreview() {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
-              Expertos en Obras Civiles y <span className="text-accent">Habilitación Urbana</span>
+              Líderes en Obras Civiles y <span className="text-accent">Habilitación Urbana en Moyobamba</span>
             </h2>
             <p className="text-gray-600 mb-8 text-lg leading-relaxed">
-              En H&M Project Solutions, nos dedicamos a brindar servicios integrales de ingeniería y construcción. Contamos con un equipo altamente calificado para desarrollar proyectos desde su concepción hasta la entrega final, garantizando seguridad, calidad y eficiencia.
+              En <strong>H&M Project Solutions</strong>, planificamos y ejecutamos obras de infraestructura y edificación que transforman el entorno. Con base estratégica en Moyobamba y operaciones a nivel nacional, brindamos soluciones integrales de ingeniería civil que combinan metodologías constructivas innovadoras, materiales certificados y un control de calidad riguroso para asegurar la máxima durabilidad, seguridad y rentabilidad de tu inversión.
             </p>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
