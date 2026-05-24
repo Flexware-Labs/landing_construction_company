@@ -42,7 +42,7 @@ const services = [
       "Redes completas de servicios básicos eficientes",
       "Mitigación de impacto ambiental certificada"
     ],
-    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop"
+    image: "/construccion-urbana.jpeg"
   },
   {
     id: "construccion-reconstruccion",
@@ -54,7 +54,7 @@ const services = [
       "Reforzamientos antisísmicos certificados",
       "Garantía de obra extendida posventa"
     ],
-    image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=2071&auto=format&fit=crop"
+    image: "/construccion.jpeg"
   },
   {
     id: "demoliciones",
@@ -66,7 +66,7 @@ const services = [
       "Gestión de residuos según normativas del MINAM",
       "Tramitación de permisos y licencias municipales"
     ],
-    image: "https://images.unsplash.com/photo-1518684079-3c830dcef090?q=80&w=1974&auto=format&fit=crop"
+    image: "/demolicion.jpeg"
   },
   {
     id: "ampliaciones-refacciones",
@@ -78,7 +78,7 @@ const services = [
       "Evaluación y refuerzos estructurales de soporte",
       "Interrupción mínima en las actividades cotidianas"
     ],
-    image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=1974&auto=format&fit=crop"
+    image: "/ampliacion.jpeg"
   },
   {
     id: "mantenimiento",
