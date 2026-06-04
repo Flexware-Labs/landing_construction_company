@@ -90,7 +90,7 @@ export default function TrabajaConNosotrosPage() {
                     <Users size={20} />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-primary">Clima Laboral Colaborativo</h4>
+                    <h4 className="font-semibold text-primary">Clima Laboral</h4>
                     <p className="text-gray-500 text-sm">Respeto mutuo, sinergia multidisciplinaria y reconocimiento al mérito individual.</p>
                   </div>
                 </li>

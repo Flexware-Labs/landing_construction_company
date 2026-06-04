@@ -103,7 +103,7 @@ export default function Footer() {
               <li className="flex items-start gap-3 text-gray-300 text-sm">
                 <MapPin className="text-accent shrink-0 mt-0.5" size={18} />
                 <span>
-                  Jr. El Dorado 145<br />
+                  Psj. Víctor Velásquez S/N<br />
                   Moyobamba, Perú
                 </span>
               </li>
