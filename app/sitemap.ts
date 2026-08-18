@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://hmprojectsolutions.pe";
+  const baseUrl = "https://hymprojectsolutions.com";
   const routes = ["", "/servicios", "/acerca-de-nosotros", "/trabaja-con-nosotros", "/contacto"];
 
   return routes.map((route) => ({

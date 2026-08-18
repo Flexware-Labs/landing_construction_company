@@ -33,14 +33,14 @@ export const metadata: Metadata = {
     "San Martín",
     "H&M Project Solutions"
   ],
-  metadataBase: new URL("https://hmprojectsolutions.pe"),
+  metadataBase: new URL("https://hymprojectsolutions.com"),
   alternates: {
     canonical: "/"
   },
   openGraph: {
     title: "H&M Project Solutions | Empresa Constructora e Ingeniería Civil",
     description: "Especialistas en obras civiles, habilitación urbana y diseño arquitectónico de alta complejidad en Moyobamba y el Perú.",
-    url: "https://hmprojectsolutions.pe",
+    url: "https://hymprojectsolutions.com",
     siteName: "H&M Project Solutions",
     locale: "es_PE",
     type: "website",
@@ -84,7 +84,7 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "ProfessionalService",
               "name": "H&M Project Solutions",
-              "image": "https://hmprojectsolutions.pe/logotipo_optimized.png",
+              "image": "https://hymprojectsolutions.com/logotipo_optimized.png",
               "telephone": "+51983752316",
               "email": "solutionsr@outlook.com",
               "address": {
@@ -100,7 +100,7 @@ export default function RootLayout({
                 "latitude": "-6.0336",
                 "longitude": "-76.9717"
               },
-              "url": "https://hmprojectsolutions.pe",
+              "url": "https://hymprojectsolutions.com",
               "sameAs": [
                 "https://www.facebook.com/flexware.labs/"
               ],
