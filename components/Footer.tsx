@@ -28,15 +28,29 @@ export default function Footer() {
               Construimos proyectos que transforman el futuro. Soluciones integrales en ingeniería, obras civiles y arquitectura con los más altos estándares de calidad y seguridad.
             </p>
             <div className="flex gap-4">
-              <a href="#" className="bg-primary/50 hover:bg-accent p-2 rounded-full transition-colors flex items-center justify-center w-9 h-9">
+              <a
+                href="https://www.facebook.com/profile.php?id=61594421790727"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook de H&M Project Solutions"
+                className="bg-primary/50 hover:bg-accent p-2 rounded-full transition-colors flex items-center justify-center w-9 h-9"
+              >
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
               </a>
-              <a href="#" className="bg-primary/50 hover:bg-accent p-2 rounded-full transition-colors flex items-center justify-center w-9 h-9">
+              <a
+                href="https://www.instagram.com/hymprojectsolutions/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram de H&M Project Solutions"
+                className="bg-primary/50 hover:bg-accent p-2 rounded-full transition-colors flex items-center justify-center w-9 h-9"
+              >
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
               </a>
+              {/* LinkedIn: sin cuenta creada todavía. Descomentar y enlazar cuando el cliente la tenga.
               <a href="#" className="bg-primary/50 hover:bg-accent p-2 rounded-full transition-colors flex items-center justify-center w-9 h-9">
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
               </a>
+              */}
             </div>
           </div>
 
@@ -89,6 +103,9 @@ export default function Footer() {
                 <Link href="/servicios" className="text-gray-300 hover:text-accent transition-colors text-sm">Diseño Arquitectónico</Link>
               </li>
               <li>
+                <Link href="/servicios" className="text-gray-300 hover:text-accent transition-colors text-sm">Servicios Generales</Link>
+              </li>
+              <li>
                 <Link href="/servicios" className="text-gray-300 hover:text-accent transition-colors text-sm text-accent font-medium mt-2 block">
                   Ver todos los servicios
                 </Link>
@@ -113,7 +130,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-3 text-gray-300 text-sm">
                 <Mail className="text-accent shrink-0" size={18} />
-                <a href="mailto:solutionsr@outlook.com" className="hover:text-accent transition-colors">solutionsr@outlook.com</a>
+                <a href="mailto:contacto@hymprojectsolutions.com" className="hover:text-accent transition-colors">contacto@hymprojectsolutions.com</a>
               </li>
             </ul>
           </div>

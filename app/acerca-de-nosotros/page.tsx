@@ -1,5 +1,6 @@
 import { Metadata } from "next";
-import { Target, Eye, ShieldCheck, Zap, Award, Handshake, Users } from "lucide-react";
+import { Target, Eye, ShieldCheck, Zap, Award, Handshake } from "lucide-react";
+// import { Users } from "lucide-react"; // usado por la sección "Team" comentada más abajo
 import Image from "next/image";
 import ScrollReveal from "@/components/motion/ScrollReveal";
 
@@ -27,12 +28,13 @@ const values = [
   { icon: <Handshake size={24} />, title: "Compromiso con el Cliente", desc: "Alineamos nuestros esfuerzos para superar las expectativas del proyecto." }
 ];
 
-const team = [
-  { name: "Carlos Ramírez", position: "Gerente General - Especialista en Obras Civiles" },
-  { name: "Ana Mendoza", position: "Directora de Proyectos - Ingeniera Civil Colegiada" },
-  { name: "Luis Fernandez", position: "Ingeniero Residente - Especialista en Infraestructura" },
-  { name: "Elena Gómez", position: "Arquitecta Principal - Diseño Urbano y Bioclimático" }
-];
+// Sección de staff desactivada a pedido del cliente (no necesaria por el momento).
+// const team = [
+//   { name: "Carlos Ramírez", position: "Gerente General - Especialista en Obras Civiles" },
+//   { name: "Ana Mendoza", position: "Directora de Proyectos - Ingeniera Civil Colegiada" },
+//   { name: "Luis Fernandez", position: "Ingeniero Residente - Especialista en Infraestructura" },
+//   { name: "Elena Gómez", position: "Arquitecta Principal - Diseño Urbano y Bioclimático" }
+// ];
 
 export default function AcercaDeNosotrosPage() {
   return (
@@ -136,7 +138,7 @@ export default function AcercaDeNosotrosPage() {
         </div>
       </section>
 
-      {/* Team */}
+      {/* Team — desactivado a pedido del cliente (no necesaria por el momento).
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -161,6 +163,7 @@ export default function AcercaDeNosotrosPage() {
           </div>
         </div>
       </section>
+      */}
     </div>
   );
 }

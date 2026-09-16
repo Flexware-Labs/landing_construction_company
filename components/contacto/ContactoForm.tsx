@@ -1,12 +1,27 @@
 "use client";
 
-import React, { useState, useEffect, Suspense } from "react";
+import React, { useState, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import { Send, CheckCircle } from "lucide-react";
 
 function FormContent() {
   const searchParams = useSearchParams();
-  const [selectedService, setSelectedService] = useState("");
+  const [selectedService, setSelectedService] = useState(() => {
+    const serviceParam = searchParams.get("servicio");
+    const serviceMap: { [key: string]: string } = {
+      "obras-civiles": "Obras Civiles",
+      "habilitacion-urbana": "Habilitación Urbana",
+      "construccion-y-reconstruccion": "Construcción y Reconstrucción",
+      "demoliciones-profesionales": "Demoliciones Profesionales",
+      "ampliaciones-y-refacciones": "Ampliaciones y Refacciones",
+      "mantenimiento-de-infraestructura": "Mantenimiento de Infraestructura",
+      "diseno-arquitectonico-moderno": "Diseño Arquitectónico Moderno",
+      "importacion-y-exportacion": "Importación y Exportación",
+      "servicios-generales": "Servicios Generales"
+    };
+    return (serviceParam && serviceMap[serviceParam]) || "";
+  });
+  const [otherService, setOtherService] = useState("");
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -15,25 +30,6 @@ function FormContent() {
   });
   const [submitted, setSubmitted] = useState(false);
 
-  useEffect(() => {
-    const serviceParam = searchParams.get("servicio");
-    if (serviceParam) {
-      const serviceMap: { [key: string]: string } = {
-        "obras-civiles": "Obras Civiles",
-        "habilitacion-urbana": "Habilitación Urbana",
-        "construccion-y-reconstruccion": "Construcción y Reconstrucción",
-        "demoliciones-profesionales": "Demoliciones Profesionales",
-        "ampliaciones-y-refacciones": "Ampliaciones y Refacciones",
-        "mantenimiento-de-infraestructura": "Mantenimiento de Infraestructura",
-        "diseno-arquitectonico-moderno": "Diseño Arquitectónico Moderno",
-        "importacion-y-exportacion": "Importación y Exportación"
-      };
-      if (serviceMap[serviceParam]) {
-        setSelectedService(serviceMap[serviceParam]);
-      }
-    }
-  }, [searchParams]);
-
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
@@ -41,7 +37,8 @@ function FormContent() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const waMessage = `Hola H&M Project Solutions, mi nombre es ${formData.name}. Deseo cotizar el servicio de ${selectedService || "Consultoría General"}. Celular: ${formData.phone}, Correo: ${formData.email}. Detalles: ${formData.message}`;
+    const serviceLabel = selectedService === "Otros" ? otherService : selectedService;
+    const waMessage = `Hola H&M Project Solutions, mi nombre es ${formData.name}. Deseo cotizar el servicio de ${serviceLabel || "Consultoría General"}. Celular: ${formData.phone}, Correo: ${formData.email}. Detalles: ${formData.message}`;
     const whatsappUrl = `https://wa.me/51983752316?text=${encodeURIComponent(waMessage)}`;
     
     setSubmitted(true);
@@ -130,8 +127,26 @@ function FormContent() {
           <option value="Mantenimiento de Infraestructura">Mantenimiento de Infraestructura</option>
           <option value="Diseño Arquitectónico Moderno">Diseño Arquitectónico Moderno</option>
           <option value="Importación y Exportación">Importación y Exportación</option>
+          <option value="Servicios Generales">Servicios Generales (limpieza, fumigación, desinfección)</option>
+          <option value="Otros">Otros</option>
         </select>
       </div>
+
+      {selectedService === "Otros" && (
+        <div className="flex flex-col gap-2">
+          <label className="text-sm font-semibold text-primary" htmlFor="otherService">Especifica el servicio *</label>
+          <input
+            required
+            type="text"
+            id="otherService"
+            name="otherService"
+            value={otherService}
+            onChange={(e) => setOtherService(e.target.value)}
+            placeholder="Cuéntanos qué servicio necesitas"
+            className="px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent text-sm"
+          />
+        </div>
+      )}
 
       <div className="flex flex-col gap-2">
         <label className="text-sm font-semibold text-primary" htmlFor="message">Mensaje y Detalles del Proyecto *</label>

@@ -115,6 +115,19 @@ const services = [
       "Acceso a materiales exclusivos de vanguardia"
     ],
     image: "/importacion-exportacion.jpeg"
+  },
+  {
+    id: "servicios-generales",
+    title: "Servicios Generales",
+    description: "Complementamos tu proyecto u obra con servicios generales de limpieza, fumigación y desinfección de ambientes. Ideal para la entrega final de obra, locales comerciales y espacios industriales que requieren un mantenimiento integral y sanitario antes o después de la construcción.",
+    benefits: [
+      "Limpieza post-construcción y de obra fina",
+      "Fumigación y control de plagas",
+      "Desinfección y sanitización de ambientes",
+      "Personal capacitado y productos certificados"
+    ],
+    // TODO: reemplazar por una foto real de servicios de limpieza/fumigación cuando el cliente la proporcione
+    image: "/empresa.jpeg"
   }
 ];
 

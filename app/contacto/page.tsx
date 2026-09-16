@@ -86,8 +86,8 @@ export default function ContactoPage() {
                     <div>
                       <h4 className="font-bold text-primary text-lg">Correo Electrónico</h4>
                       <p className="text-gray-600 mt-1">
-                        <a href="mailto:solutionsr@outlook.com" className="hover:text-accent transition-colors font-medium">
-                          solutionsr@outlook.com
+                        <a href="mailto:contacto@hymprojectsolutions.com" className="hover:text-accent transition-colors font-medium">
+                          contacto@hymprojectsolutions.com
                         </a>
                       </p>
                     </div>
@@ -134,7 +134,7 @@ export default function ContactoPage() {
         </div>
       </section>
 
-      {/* Styled Interactive Maps Representation / Local Signal */}
+      {/* Mapa desactivado a pedido del cliente. Descomentar cuando se quiera mostrar de nuevo.
       <section className="w-full h-110 bg-gray-200 relative border-t border-gray-200">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3962.1384033282245!2d-76.9717013!3d-6.0336217!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91b7252277d344d9%3A0xe54d24ad7ab5c3ab!2sJr.%20El%20Dorado%20145%2C%20Moyobamba%2022001!5e0!3m2!1ses!2spe!4v1700000000000!5m2!1ses!2spe"
@@ -160,6 +160,7 @@ export default function ContactoPage() {
           </a>
         </div>
       </section>
+      */}
     </div>
   );
 }

@@ -1,14 +1,15 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { 
-  Building2, 
-  Map, 
-  Hammer, 
-  Trash2, 
-  Wrench, 
-  PenTool, 
-  Truck, 
+import {
+  Building2,
+  Map,
+  Hammer,
+  Trash2,
+  Wrench,
+  PenTool,
+  Truck,
+  SprayCan,
   ArrowRight
 } from "lucide-react";
 
@@ -52,6 +53,11 @@ const services = [
     title: "Importación y Exportación",
     description: "Suministro e importación directa de maquinaria pesada, equipos de construcción y acabados exclusivos para proyectos.",
     icon: <Truck size={40} />,
+  },
+  {
+    title: "Servicios Generales",
+    description: "Limpieza post-construcción, fumigación y desinfección de ambientes para obras, locales comerciales e instalaciones industriales.",
+    icon: <SprayCan size={40} />,
   }
 ];
 

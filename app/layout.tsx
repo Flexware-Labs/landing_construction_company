@@ -86,7 +86,7 @@ export default function RootLayout({
               "name": "H&M Project Solutions",
               "image": "https://hymprojectsolutions.com/logotipo_optimized.png",
               "telephone": "+51983752316",
-              "email": "solutionsr@outlook.com",
+              "email": "contacto@hymprojectsolutions.com",
               "address": {
                 "@type": "PostalAddress",
                 "streetAddress": "Jr. El Dorado 145",
@@ -102,7 +102,8 @@ export default function RootLayout({
               },
               "url": "https://hymprojectsolutions.com",
               "sameAs": [
-                "https://www.facebook.com/flexware.labs/"
+                "https://www.facebook.com/profile.php?id=61594421790727",
+                "https://www.instagram.com/hymprojectsolutions/"
               ],
               "priceRange": "$$$",
               "areaServed": ["Moyobamba", "San Martín", "Perú"],
@@ -114,7 +115,8 @@ export default function RootLayout({
                 "Ampliaciones y refacciones",
                 "Mantenimiento de infraestructura",
                 "Diseño arquitectónico",
-                "Importación y exportación de materiales y maquinaria"
+                "Importación y exportación de materiales y maquinaria",
+                "Servicios generales de limpieza, fumigación y desinfección"
               ]
             })
           }}
