@@ -1,5 +1,6 @@
 import { Metadata } from "next";
-import { Phone, Mail, MapPin, Clock, MessageSquare } from "lucide-react";
+import { Mail, MapPin, Clock, MessageSquare } from "lucide-react";
+// import { Phone } from "lucide-react"; // usado por el bloque "Teléfono / WhatsApp" comentado más abajo
 import ContactoForm from "@/components/contacto/ContactoForm";
 import ScrollReveal from "@/components/motion/ScrollReveal";
 
@@ -62,7 +63,7 @@ export default function ContactoPage() {
                     </div>
                   </div>
 
-                  {/* Phone */}
+                  {/* Teléfono desactivado a pedido del cliente.
                   <div className="flex items-start gap-4">
                     <div className="bg-accent/10 text-accent p-3 rounded-xl shrink-0">
                       <Phone size={24} />
@@ -77,6 +78,7 @@ export default function ContactoPage() {
                       </p>
                     </div>
                   </div>
+                  */}
 
                   {/* Email */}
                   <div className="flex items-start gap-4">

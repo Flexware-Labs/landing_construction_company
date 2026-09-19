@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Phone, Mail, MapPin } from "lucide-react";
+import { Mail, MapPin } from "lucide-react";
+// import { Phone } from "lucide-react"; // usado por el bloque de teléfono comentado más abajo
 
 export default function Footer() {
   return (
@@ -124,10 +125,12 @@ export default function Footer() {
                   Moyobamba, Perú
                 </span>
               </li>
+              {/* Teléfono desactivado a pedido del cliente.
               <li className="flex items-center gap-3 text-gray-300 text-sm">
                 <Phone className="text-accent shrink-0" size={18} />
                 <a href="tel:+51983752316" className="hover:text-accent transition-colors">+51 983 752 316</a>
               </li>
+              */}
               <li className="flex items-center gap-3 text-gray-300 text-sm">
                 <Mail className="text-accent shrink-0" size={18} />
                 <a href="mailto:contacto@hymprojectsolutions.com" className="hover:text-accent transition-colors">contacto@hymprojectsolutions.com</a>

@@ -102,7 +102,7 @@ function FormContent() {
             name="phone"
             value={formData.phone}
             onChange={handleChange}
-            placeholder="+51 983 752 316"
+            placeholder="+51 999 999 999"
             className="px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent text-sm"
           />
         </div>
