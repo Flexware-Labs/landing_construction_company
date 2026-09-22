@@ -45,12 +45,10 @@ export default function HeroSection() {
             <motion.a
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              href="https://wa.me/51983752316"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/contacto"
               className="bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/30 text-white px-8 py-4 rounded-full font-semibold text-lg transition-colors flex items-center gap-2 w-full sm:w-auto justify-center"
             >
-              Contactar por WhatsApp <MessageCircle size={20} />
+              Contáctanos <MessageCircle size={20} />
             </motion.a>
           </div>
         </motion.div>
