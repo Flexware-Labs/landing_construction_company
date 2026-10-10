@@ -1,6 +1,8 @@
 "use client";
 
 import React, { useState, Suspense } from "react";
+import Link from "next/link";
+import { EMPRESA } from "@/lib/empresa";
 import { useSearchParams } from "next/navigation";
 import { Send, CheckCircle } from "lucide-react";
 
@@ -11,12 +13,14 @@ function FormContent() {
     const serviceMap: { [key: string]: string } = {
       "obras-civiles": "Obras Civiles",
       "habilitacion-urbana": "Habilitación Urbana",
-      "construccion-y-reconstruccion": "Construcción y Reconstrucción",
-      "demoliciones-profesionales": "Demoliciones Profesionales",
-      "ampliaciones-y-refacciones": "Ampliaciones y Refacciones",
-      "mantenimiento-de-infraestructura": "Mantenimiento de Infraestructura",
-      "diseno-arquitectonico-moderno": "Diseño Arquitectónico Moderno",
-      "importacion-y-exportacion": "Importación y Exportación",
+      "saneamiento-fisico-legal": "Saneamiento Físico-Legal de Predios",
+      "gestion-ambiental-territorial-forestal": "Gestión Ambiental Territorial y Forestal",
+      "construccion-reconstruccion": "Construcción y Reconstrucción",
+      "demoliciones": "Demoliciones Profesionales",
+      "ampliaciones-refacciones": "Ampliaciones y Refacciones",
+      "mantenimiento": "Mantenimiento de Infraestructura",
+      "diseno-arquitectonico": "Diseño Arquitectónico Moderno",
+      "importacion-exportacion": "Importación y Exportación",
       "servicios-generales": "Servicios Generales"
     };
     return (serviceParam && serviceMap[serviceParam]) || "";
@@ -28,6 +32,7 @@ function FormContent() {
     phone: "",
     message: ""
   });
+  const [acceptedPrivacy, setAcceptedPrivacy] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -38,8 +43,18 @@ function FormContent() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const serviceLabel = selectedService === "Otros" ? otherService : selectedService;
-    const waMessage = `Hola H&M Project Solutions, mi nombre es ${formData.name}. Deseo cotizar el servicio de ${serviceLabel || "Consultoría General"}. Celular: ${formData.phone}, Correo: ${formData.email}. Detalles: ${formData.message}`;
-    const whatsappUrl = `https://wa.me/51983752316?text=${encodeURIComponent(waMessage)}`;
+    const waMessage = [
+      "👋 Hola H&M Project Solutions, deseo solicitar una cotización.",
+      "",
+      `👤 *Nombre:* ${formData.name}`,
+      `🔧 *Servicio:* ${serviceLabel || "Consultoría General"}`,
+      `📱 *Celular:* ${formData.phone}`,
+      `📧 *Correo:* ${formData.email}`,
+      `📝 *Detalles:* ${formData.message}`,
+      "",
+      "✅ Acepto la Política de Privacidad y los Términos y Condiciones.",
+    ].join("\n");
+    const whatsappUrl = `https://api.whatsapp.com/send?phone=${EMPRESA.whatsapp}&text=${encodeURIComponent(waMessage)}`;
     
     setSubmitted(true);
     setTimeout(() => {
@@ -121,6 +136,8 @@ function FormContent() {
           <option value="">-- Selecciona una especialidad --</option>
           <option value="Obras Civiles">Obras Civiles</option>
           <option value="Habilitación Urbana">Habilitación Urbana</option>
+          <option value="Saneamiento Físico-Legal de Predios">Saneamiento Físico-Legal de Predios</option>
+          <option value="Gestión Ambiental Territorial y Forestal">Gestión Ambiental Territorial y Forestal</option>
           <option value="Construcción y Reconstrucción">Construcción y Reconstrucción</option>
           <option value="Demoliciones Profesionales">Demoliciones Profesionales</option>
           <option value="Ampliaciones y Refacciones">Ampliaciones y Refacciones</option>
@@ -161,6 +178,16 @@ function FormContent() {
           className="px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent text-sm resize-none"
         ></textarea>
       </div>
+
+      <label className="flex items-start gap-3 text-sm text-gray-600 cursor-pointer">
+        <input required type="checkbox" name="privacy" checked={acceptedPrivacy} onChange={(e) => setAcceptedPrivacy(e.target.checked)} className="mt-1 h-4 w-4 accent-accent shrink-0" />
+        <span>
+          He leído y acepto la{" "}
+          <Link href="/politica-de-privacidad" target="_blank" className="text-accent underline">Política de Privacidad</Link>{" "}
+          y los{" "}
+          <Link href="/terminos-y-condiciones" target="_blank" className="text-accent underline">Términos y Condiciones</Link>. *
+        </span>
+      </label>
 
       <button
         type="submit"

@@ -3,6 +3,7 @@ import { ReactNode } from "react";
 import { Briefcase, ChevronRight } from "lucide-react";
 import Image from "next/image";
 import ScrollReveal from "@/components/motion/ScrollReveal";
+import { EMPRESA } from "@/lib/empresa";
 
 export const metadata: Metadata = {
   title: "Trabaja con Nosotros | Empleo en Ingeniería y Construcción",
@@ -54,7 +55,7 @@ const jobs = [
 // Cambiar a `true` cuando existan vacantes reales y se quiera reactivar la postulación.
 const HIRING_OPEN = false;
 
-const WHATSAPP_NUMBER = "51983752316";
+const WHATSAPP_NUMBER = EMPRESA.whatsapp;
 
 function buildWhatsappUrl(message: string) {
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;

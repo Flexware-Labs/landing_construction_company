@@ -71,8 +71,8 @@ export default function ContactoPage() {
                     <div>
                       <h4 className="font-bold text-primary text-lg">Teléfono / WhatsApp</h4>
                       <p className="text-gray-600 mt-1">
-                        <a href="tel:+51983752316" className="hover:text-accent transition-colors font-medium text-lg">
-                          +51 983 752 316
+                        <a href="tel:+51992383416" className="hover:text-accent transition-colors font-medium text-lg">
+                          +51 992 383 416
                         </a>
                         <span className="block text-sm text-gray-400 mt-0.5">Atención técnica y cotizaciones inmediatas</span>
                       </p>

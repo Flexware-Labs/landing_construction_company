@@ -128,7 +128,7 @@ export default function Footer() {
               {/* Teléfono desactivado a pedido del cliente.
               <li className="flex items-center gap-3 text-gray-300 text-sm">
                 <Phone className="text-accent shrink-0" size={18} />
-                <a href="tel:+51983752316" className="hover:text-accent transition-colors">+51 983 752 316</a>
+                <a href="tel:+51992383416" className="hover:text-accent transition-colors">+51 992 383 416</a>
               </li>
               */}
               <li className="flex items-center gap-3 text-gray-300 text-sm">
@@ -142,9 +142,15 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-gray-600 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-gray-400 text-sm text-center md:text-left">
-            &copy; {new Date().getFullYear()} H&M Project Solutions. Todos los derechos reservados.
+            &copy; {new Date().getFullYear()} H & M RAYSA S.A.C.S. (H & M Project Solutions) · RUC 20611120851. Todos los derechos reservados.
           </p>
-          <div className="flex gap-6">
+          <div className="flex flex-wrap justify-center gap-x-6 gap-y-2">
+            <Link href="/politica-de-privacidad" className="text-gray-400 hover:text-white text-sm transition-colors">
+              Política de Privacidad
+            </Link>
+            <Link href="/terminos-y-condiciones" className="text-gray-400 hover:text-white text-sm transition-colors">
+              Términos y Condiciones
+            </Link>
             <Link href="https://www.facebook.com/flexware.labs/" target="_blank" className="text-gray-400 hover:text-white text-sm transition-colors">
               Powered by: Flexware Labs
             </Link>

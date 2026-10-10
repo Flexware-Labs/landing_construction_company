@@ -10,51 +10,74 @@ import {
   PenTool,
   Truck,
   SprayCan,
+  FileCheck,
+  Trees,
   ArrowRight
 } from "lucide-react";
 
 const services = [
   {
+    id: "obras-civiles",
     title: "Obras Civiles",
     description: "Construcción e ingeniería de puentes, carreteras, pavimentaciones, naves industriales y estructuras de alta resistencia.",
     icon: <Building2 size={40} />,
   },
   {
+    id: "habilitacion-urbana",
     title: "Habilitación Urbana",
-    description: "Saneamiento físico-legal de terrenos, tendido de redes de agua y desagüe, electrificación y pavimentación integral.",
+    description: "Habilitación municipal de terrenos, tendido de redes de agua y desagüe, electrificación y pavimentación integral.",
     icon: <Map size={40} />,
   },
   {
+    id: "saneamiento-fisico-legal",
+    title: "Saneamiento Físico-Legal de Predios",
+    description: "Diagnóstico técnico-legal, independización y subdivisión, rectificación de áreas y linderos, y prescripción adquisitiva de dominio.",
+    icon: <FileCheck size={40} />,
+  },
+  {
+    id: "gestion-ambiental-territorial-forestal",
+    title: "Gestión Ambiental Territorial y Forestal",
+    description: "Estudios ambientales, ordenamiento territorial y trámites forestales para proyectos públicos y privados.",
+    icon: <Trees size={40} />,
+  },
+  {
+    id: "construccion-reconstruccion",
     title: "Construcción y Reconstrucción",
     description: "Edificación residencial y comercial desde los cimientos hasta los acabados, y restauración estructural de inmuebles.",
     icon: <Hammer size={40} />,
   },
   {
+    id: "demoliciones",
     title: "Demoliciones",
     description: "Demolición segura de concreto armado y estructuras complejas, mitigación de riesgos y manejo responsable de escombros.",
     icon: <Trash2 size={40} />,
   },
   {
+    id: "ampliaciones-refacciones",
     title: "Ampliaciones y Refacciones",
     description: "Optimización, refuerzo y ampliación de espacios residenciales e industriales incorporando acabados modernos y seguros.",
     icon: <Wrench size={40} />,
   },
   {
+    id: "mantenimiento",
     title: "Mantenimiento de Infraestructura",
     description: "Planes correctivos y preventivos para prolongar la vida útil de plantas industriales, fachadas y edificaciones comerciales.",
     icon: <Wrench size={40} />,
   },
   {
+    id: "diseno-arquitectonico",
     title: "Diseño Arquitectónico",
     description: "Diseño de planos de arquitectura, modelado 3D, distribución eficiente de espacios y gestión de licencias municipales.",
     icon: <PenTool size={40} />,
   },
   {
+    id: "importacion-exportacion",
     title: "Importación y Exportación",
     description: "Suministro e importación directa de maquinaria pesada, equipos de construcción y acabados exclusivos para proyectos.",
     icon: <Truck size={40} />,
   },
   {
+    id: "servicios-generales",
     title: "Servicios Generales",
     description: "Limpieza post-construcción, fumigación y desinfección de ambientes para obras, locales comerciales e instalaciones industriales.",
     icon: <SprayCan size={40} />,
@@ -101,8 +124,7 @@ export default function ServicesPreview() {
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
         >
           {services.map((service, index) => {
-            const serviceSlug = encodeURIComponent(service.title.toLowerCase().replace(/\s+/g, '-'));
-            const contactUrl = `/contacto?servicio=${serviceSlug}`;
+            const contactUrl = `/contacto?servicio=${service.id}`;
 
             return (
               <motion.div 

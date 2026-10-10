@@ -5,10 +5,12 @@ import ScrollReveal from "@/components/motion/ScrollReveal";
 
 export const metadata: Metadata = {
   title: "Servicios de Ingeniería Civil y Obras Civiles en Moyobamba y todo el Perú",
-  description: "Portafolio de servicios de H&M Project Solutions: Obras civiles, habilitación urbana, demoliciones, ampliaciones y diseño arquitectónico moderno en Moyobamba.",
+  description: "Portafolio de servicios de H&M Project Solutions: Obras civiles, habilitación urbana, saneamiento físico-legal de predios, gestión ambiental, territorial y forestal, demoliciones, ampliaciones y diseño arquitectónico en Moyobamba.",
   keywords: [
     "obras civiles en Moyobamba",
     "habilitación urbana Perú",
+    "saneamiento físico-legal de predios",
+    "gestión ambiental y forestal",
     "servicios de ingeniería civil",
     "demolición de estructuras",
     "diseño arquitectónico moderno",
@@ -35,14 +37,40 @@ const services = [
   {
     id: "habilitacion-urbana",
     title: "Habilitación Urbana",
-    description: "Transformamos terrenos rústicos o agrícolas en espacios urbanos listos para habitar o comercializar. Ejecutamos el saneamiento físico-legal completo, diseño de redes de agua potable, alcantarillado, redes eléctricas de media y baja tensión, pavimentación de pistas, veredas y áreas recreativas.",
+    description: "Transformamos terrenos rústicos o agrícolas en espacios urbanos listos para habitar o comercializar. Gestionamos la habilitación municipal completa, diseño de redes de agua potable, alcantarillado, redes eléctricas de media y baja tensión, pavimentación de pistas, veredas y áreas recreativas.",
     benefits: [
       "Estudios topográficos y mecánicas de suelo",
-      "Saneamiento físico-legal integral y habilitación municipal",
+      "Trámite de habilitación urbana y recepción de obras ante el municipio",
       "Redes completas de servicios básicos eficientes",
       "Mitigación de impacto ambiental certificada"
     ],
     image: "/construccion-urbana.jpeg"
+  },
+  {
+    id: "saneamiento-fisico-legal",
+    title: "Saneamiento Físico-Legal de Predios",
+    description: "Regularizamos la situación técnica y legal de tu terreno o inmueble para que puedas venderlo, financiarlo, construir o inscribirlo sin contratiempos. Nuestro equipo de ingenieros y abogados especialistas se encarga de todo el proceso ante Registros Públicos, municipalidades y demás entidades competentes.",
+    benefits: [
+      "Diagnóstico técnico-legal de predios",
+      "Independización y subdivisión de lotes",
+      "Rectificación de áreas, linderos y medidas perimétricas",
+      "Prescripción adquisitiva de dominio"
+    ],
+    // TODO: reemplazar por una foto real de saneamiento/topografía cuando el cliente la proporcione
+    image: "https://images.unsplash.com/photo-1521791055366-0d553872125f?q=80&w=2071&auto=format&fit=crop"
+  },
+  {
+    id: "gestion-ambiental-territorial-forestal",
+    title: "Gestión Ambiental Territorial y Forestal",
+    description: "Acompañamos proyectos públicos y privados en el cumplimiento de la normativa ambiental, el ordenamiento del territorio y el manejo de recursos forestales. Elaboramos estudios, instrumentos de gestión y trámites ante las autoridades competentes para que tu proyecto avance con respaldo técnico y legal.",
+    benefits: [
+      "Estudios e instrumentos de gestión ambiental",
+      "Ordenamiento y planificación territorial",
+      "Gestión y trámites de permisos forestales",
+      "Planes de manejo, reforestación y conservación"
+    ],
+    // TODO: reemplazar por una foto real de gestión ambiental/forestal cuando el cliente la proporcione
+    image: "/servicios.jpeg"
   },
   {
     id: "construccion-reconstruccion",
@@ -152,8 +180,7 @@ export default function ServiciosPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-24">
           {services.map((service, index) => {
             const isEven = index % 2 === 0;
-            const serviceSlug = encodeURIComponent(service.title.toLowerCase().replace(/\s+/g, '-'));
-            const contactUrl = `/contacto?servicio=${serviceSlug}`;
+            const contactUrl = `/contacto?servicio=${service.id}`;
 
             return (
               <div 

@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import { EMPRESA } from "@/lib/empresa";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -85,7 +86,7 @@ export default function RootLayout({
               "@type": "ProfessionalService",
               "name": "H&M Project Solutions",
               "image": "https://hymprojectsolutions.com/logotipo_optimized.png",
-              "telephone": "+51983752316",
+              "telephone": `+${EMPRESA.whatsapp}`,
               "email": "contacto@hymprojectsolutions.com",
               "address": {
                 "@type": "PostalAddress",
